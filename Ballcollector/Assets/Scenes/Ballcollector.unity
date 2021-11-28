@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 198076436}
   - component: {fileID: 198076435}
   - component: {fileID: 198076434}
+  - component: {fileID: 198076438}
   m_Layer: 0
   m_Name: SphereAgent
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
     type: 3}
   iMaxNumber: 5
   fRange: 9.5
+  speed: 1
 --- !u!114 &198076437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,23 +283,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 7
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 0
-      BranchSizes: 01000000
-    VectorActionSize: 01000000
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
     VectorActionDescriptions: []
-    VectorActionSpaceType: 0
+    VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 1
-  m_BehaviorName: My Behavior
+  m_BehaviorName: Ballcollector
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
+--- !u!114 &198076438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198076429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
+  - border
+  - floor
+  m_RaysPerDirection: 2
+  m_MaxRayDegrees: 70
+  m_SphereCastRadius: 0.5
+  m_RayLength: 3
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
 --- !u!1 &683049280
 GameObject:
   m_ObjectHideFlags: 0
