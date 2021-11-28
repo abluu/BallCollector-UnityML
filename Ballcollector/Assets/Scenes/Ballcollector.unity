@@ -264,6 +264,10 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
+  goalGameobj: {fileID: 10891910127725326, guid: c1f61a98b890e614d904109a12e9b765,
+    type: 3}
+  iMaxNumber: 5
+  fRange: 9.5
 --- !u!114 &198076437
 MonoBehaviour:
   m_ObjectHideFlags: 0
